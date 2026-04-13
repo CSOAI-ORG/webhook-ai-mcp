@@ -1,0 +1,10 @@
+name: webhook-ai-mcp
+description: "MEOK AI Labs — webhook-ai-mcp"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/webhook-ai-mcp
+license: MIT
+categories: [Developer Tools, Integration]
+tags: [webhook, event-driven, http-callback, webhook-management, api-integration]
+runtime: python
+entrypoint: server.py
