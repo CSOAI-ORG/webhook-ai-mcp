@@ -1,20 +1,67 @@
 {
   "name": "webhook-ai-mcp",
-  "description": "MEOK AI Labs \u2014 webhook-ai-mcp",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/webhook-ai-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "webhook-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "version": "1.0.0",
   "tools": [
-    "run"
-  ],
-  "categories": [
-    "Developer Tools",
-    "Integration"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "validate_webhook_signature",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "type": "string"
+          },
+          "signature": {
+            "type": "string"
+          },
+          "secret": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "payload",
+          "signature",
+          "secret"
+        ]
+      }
+    },
+    {
+      "name": "webhook_log",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "event": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "event",
+          "source"
+        ]
+      }
+    },
+    {
+      "name": "replay_events",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "source": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "source"
+        ]
+      }
+    }
+  ]
 }
