@@ -1,6 +1,6 @@
 name: webhook-ai-mcp
-description: Webhook management and debugging. Validate signatures, log events, replay,
-  and analyze webhook traff
+description: 'Webhook Ai tools for AI agents. Capabilities: validate webhook signature,
+  log webhook event, replay events. Built by MEOK AI Labs.'
 version: 1.0.0
 tools:
 - name: validate_webhook_signature
