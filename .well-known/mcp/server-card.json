@@ -1,0 +1,57 @@
+{
+  "name": "webhook-ai",
+  "description": "Webhook management and debugging. Validate signatures, log events, replay, and analyze webhook traffic. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/webhook-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "validate_webhook_signature",
+      "description": "Validate a webhook signature against a payload and secret. Supports sha256, sha1, md5."
+    },
+    {
+      "name": "log_webhook_event",
+      "description": "Log a webhook event for debugging and replay."
+    },
+    {
+      "name": "replay_events",
+      "description": "Replay/retrieve logged webhook events with optional filters."
+    },
+    {
+      "name": "register_endpoint",
+      "description": "Register a webhook endpoint for monitoring."
+    },
+    {
+      "name": "generate_webhook_secret",
+      "description": "Generate a cryptographically secure webhook signing secret."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Developer Tools"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
