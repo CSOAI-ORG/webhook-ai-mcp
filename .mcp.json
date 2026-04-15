@@ -1,11 +1,11 @@
 {
   "name": "webhook-ai-mcp",
-  "description": "webhook-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Webhook management and debugging. Validate signatures, log events, replay, and analyze webhook traff",
   "version": "1.0.0",
   "tools": [
     {
       "name": "validate_webhook_signature",
-      "description": "",
+      "description": "Validate a webhook signature against a payload and secret. Supports sha256, sha1, md5.",
       "parameters": {
         "type": "object",
         "properties": {
@@ -17,6 +17,9 @@
           },
           "secret": {
             "type": "string"
+          },
+          "scheme": {
+            "type": "string"
           }
         },
         "required": [
@@ -27,40 +30,88 @@
       }
     },
     {
-      "name": "webhook_log",
-      "description": "",
+      "name": "log_webhook_event",
+      "description": "Log a webhook event for debugging and replay.",
       "parameters": {
         "type": "object",
         "properties": {
-          "event": {
+          "event_type": {
             "type": "string"
           },
           "source": {
             "type": "string"
+          },
+          "payload": {
+            "type": "string"
+          },
+          "headers": {
+            "type": "string"
+          },
+          "status_code": {
+            "type": "integer"
           }
         },
         "required": [
-          "event",
+          "event_type",
           "source"
         ]
       }
     },
     {
       "name": "replay_events",
-      "description": "",
+      "description": "Replay/retrieve logged webhook events with optional filters.",
       "parameters": {
         "type": "object",
         "properties": {
           "source": {
             "type": "string"
           },
+          "event_type": {
+            "type": "string"
+          },
           "limit": {
             "type": "integer"
           }
         },
+        "required": []
+      }
+    },
+    {
+      "name": "register_endpoint",
+      "description": "Register a webhook endpoint for monitoring.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "secret": {
+            "type": "string"
+          },
+          "events": {
+            "type": "string"
+          }
+        },
         "required": [
-          "source"
+          "name",
+          "url"
         ]
+      }
+    },
+    {
+      "name": "generate_webhook_secret",
+      "description": "Generate a cryptographically secure webhook signing secret.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "length": {
+            "type": "integer"
+          }
+        },
+        "required": []
       }
     }
   ]

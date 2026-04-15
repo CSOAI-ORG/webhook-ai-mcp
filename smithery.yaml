@@ -1,9 +1,11 @@
 name: webhook-ai-mcp
-description: "webhook-ai-mcp \u2014 Built by [MEOK AI Labs](https://meok.ai)"
+description: Webhook management and debugging. Validate signatures, log events, replay,
+  and analyze webhook traff
 version: 1.0.0
 tools:
 - name: validate_webhook_signature
-  description: ''
+  description: Validate a webhook signature against a payload and secret. Supports
+    sha256, sha1, md5.
   parameters:
   - name: payload
     type: string
@@ -14,21 +16,57 @@ tools:
   - name: secret
     type: string
     required: true
-- name: webhook_log
-  description: ''
+  - name: scheme
+    type: string
+    required: false
+- name: log_webhook_event
+  description: Log a webhook event for debugging and replay.
   parameters:
-  - name: event
+  - name: event_type
     type: string
     required: true
   - name: source
     type: string
     required: true
+  - name: payload
+    type: string
+    required: false
+  - name: headers
+    type: string
+    required: false
+  - name: status_code
+    type: integer
+    required: false
 - name: replay_events
-  description: ''
+  description: Replay/retrieve logged webhook events with optional filters.
   parameters:
   - name: source
     type: string
-    required: true
+    required: false
+  - name: event_type
+    type: string
+    required: false
   - name: limit
+    type: integer
+    required: false
+- name: register_endpoint
+  description: Register a webhook endpoint for monitoring.
+  parameters:
+  - name: name
+    type: string
+    required: true
+  - name: url
+    type: string
+    required: true
+  - name: secret
+    type: string
+    required: false
+  - name: events
+    type: string
+    required: false
+- name: generate_webhook_secret
+  description: Generate a cryptographically secure webhook signing secret.
+  parameters:
+  - name: length
     type: integer
     required: false
