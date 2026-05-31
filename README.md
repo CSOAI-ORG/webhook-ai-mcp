@@ -1,80 +1,78 @@
-# Webhook Ai
+# Webhook Ai MCP
 
-> By [MEOK AI Labs](https://meok.ai) — Webhook management and debugging. Validate signatures, log events, replay, and analyze webhook traffic. By MEOK AI Labs.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/webhook_ai_mcp/)
 
-Webhook AI MCP — MEOK AI Labs. Webhook validation, event logging, replay, and debugging.
+> Webhook management and debugging
 
-## Installation
+Webhook management and debugging. Validate signatures, log events, replay, and analyze webhook traffic. By MEOK AI Labs.
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-pip install webhook-ai-mcp
+# Install via pip
+pip install webhook_ai_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install webhook-ai-mcp --client claude
 ```
 
-## Usage
+## ✨ Features
 
-```bash
-# Run standalone
-python server.py
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-# Or via MCP
-mcp install webhook-ai-mcp
-```
+## 📖 Documentation
 
-## Tools
+- [Full Documentation](https://docs.meok.ai/webhook-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-### `validate_webhook_signature`
-Validate a webhook signature against a payload and secret. Supports sha256, sha1, md5.
+## 🛡️ Compliance
 
-**Parameters:**
-- `payload` (str)
-- `signature` (str)
-- `secret` (str)
-- `scheme` (str)
+This MCP server is built with **EU AI Act compliance** built-in:
 
-### `log_webhook_event`
-Log a webhook event for debugging and replay.
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-**Parameters:**
-- `event_type` (str)
-- `source` (str)
-- `payload` (str)
-- `headers` (str)
-- `status_code` (int)
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-### `replay_events`
-Replay/retrieve logged webhook events with optional filters.
+## 🏢 Enterprise
 
-**Parameters:**
-- `source` (str)
-- `event_type` (str)
-- `limit` (int)
+Need custom development, SLA guarantees, or white-label deployment?
 
-### `register_endpoint`
-Register a webhook endpoint for monitoring.
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-**Parameters:**
-- `name` (str)
-- `url` (str)
-- `secret` (str)
-- `events` (str)
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-### `generate_webhook_secret`
-Generate a cryptographically secure webhook signing secret.
+## 🤝 Part of the MEOK Ecosystem
 
-**Parameters:**
-- `length` (int)
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-## Authentication
+## 📜 License
 
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-## Links
+---
 
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/webhook-ai-mcp](https://github.com/CSOAI-ORG/webhook-ai-mcp)
-- **PyPI**: [pypi.org/project/webhook-ai-mcp](https://pypi.org/project/webhook-ai-mcp/)
-
-## License
-
-MIT — MEOK AI Labs
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
