@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "webhook-ai-mcp"
-version = "1.0.4"
+version = "1.0.6"
 description = "Webhook Ai tools for AI agents. Capabilities: validate webhook signature, log webhook event, replay events. Built by MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
