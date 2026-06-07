@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "webhook-ai-mcp",
+    "description": "Webhook Ai tools for AI agents. Capabilities: validate webhook signature, log webhook event, replay",
+    "version": "1.0.4",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "webhook-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "validate_webhook_signature",
+      "log_webhook_event",
+      "replay_events",
+      "register_endpoint",
+      "generate_webhook_secret"
+    ]
+  }
+}

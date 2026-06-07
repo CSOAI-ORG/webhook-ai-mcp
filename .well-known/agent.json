@@ -1,0 +1,68 @@
+{
+  "name": "webhook-ai-mcp",
+  "description": "Webhook Ai tools for AI agents. Capabilities: validate webhook signature, log webhook event, replay",
+  "url": "https://proofof.ai/scorecard/webhook-ai-mcp.html",
+  "version": "1.0.4",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "validate_webhook_signature",
+      "name": "Validate Webhook Signature",
+      "description": "validate_webhook_signature via webhook-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "log_webhook_event",
+      "name": "Log Webhook Event",
+      "description": "log_webhook_event via webhook-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "replay_events",
+      "name": "Replay Events",
+      "description": "replay_events via webhook-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "register_endpoint",
+      "name": "Register Endpoint",
+      "description": "register_endpoint via webhook-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_webhook_secret",
+      "name": "Generate Webhook Secret",
+      "description": "generate_webhook_secret via webhook-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
