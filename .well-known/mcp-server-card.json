@@ -1,0 +1,28 @@
+{
+  "name": "webhook-ai-mcp",
+  "title": "Webhook Ai Mcp",
+  "description": "Webhook Ai tools for AI agents. Capabilities: validate webhook signature, log webhook event, replay events. Built by MEOK AI Labs.",
+  "version": "1.0.4",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "validate_webhook_signature"
+    },
+    {
+      "name": "log_webhook_event"
+    },
+    {
+      "name": "replay_events"
+    },
+    {
+      "name": "register_endpoint"
+    },
+    {
+      "name": "generate_webhook_secret"
+    }
+  ]
+}

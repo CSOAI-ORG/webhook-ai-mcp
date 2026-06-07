@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Webhook AI MCP — MEOK AI Labs. Webhook validation, event logging, replay, and debugging."""
+"""
+Webhook AI MCP — MEOK AI Labs. Webhook validation, event logging, replay, and debugging."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, hashlib, hmac, time
@@ -35,7 +35,7 @@ def validate_webhook_signature(payload: str, signature: str, secret: str, scheme
     """Validate a webhook signature against a payload and secret. Supports sha256, sha1, md5."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     scheme = scheme.lower()
@@ -61,7 +61,7 @@ def log_webhook_event(event_type: str, source: str, payload: str = "{}", headers
     """Log a webhook event for debugging and replay."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     event_id = f"evt-{hashlib.sha256(f'{source}{time.time_ns()}'.encode()).hexdigest()[:16]}"
@@ -88,7 +88,7 @@ def replay_events(source: str = "", event_type: str = "", limit: int = 20, api_k
     """Replay/retrieve logged webhook events with optional filters."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     filtered = _EVENT_LOG
@@ -121,7 +121,7 @@ def register_endpoint(name: str, url: str, secret: str = "", events: str = "*", 
     """Register a webhook endpoint for monitoring."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     endpoint_id = f"ep-{hashlib.sha256(f'{name}{url}'.encode()).hexdigest()[:12]}"
@@ -143,7 +143,7 @@ def generate_webhook_secret(length: int = 32, api_key: str = "") -> str:
     """Generate a cryptographically secure webhook signing secret."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+        return {"error": msg, "upgrade_url": "https://councilof.ai"}
     if err := _rl(): return err
 
     secret = hashlib.sha256(os.urandom(64)).hexdigest()[:length]
@@ -155,5 +155,8 @@ def generate_webhook_secret(length: int = 32, api_key: str = "") -> str:
     }
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

@@ -1,32 +1,36 @@
-# Webhook Ai MCP
-
-> Webhook management and debugging
-
-`webhook-ai-mcp` is a Model Context Protocol (MCP) server by MEOK AI Labs.
+# webhook-ai-mcp
+# > By [MEOK AI Labs](https://meok.ai) — Webhook management and debugging. Validate signatures, log events, replay, and analyze webhook traffic. By MEOK AI Labs.
 
 ## Install
-
 ```bash
 pip install webhook-ai-mcp
 ```
 
-Or run without installing:
-
-```bash
-uvx webhook-ai-mcp
-```
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
 
 ## Tools
 
-- `validate_webhook_signature` — Validate a webhook signature against a payload and secret. Supports sha256, sha1, md5.
-- `log_webhook_event` — Log a webhook event for debugging and replay.
-- `replay_events` — Replay/retrieve logged webhook events with optional filters.
-- `register_endpoint` — Register a webhook endpoint for monitoring.
-- `generate_webhook_secret` — Generate a cryptographically secure webhook signing secret.
+### `validate_webhook_signature`
+Validate a webhook signature against a payload and secret. Supports sha256, sha1, md5.
 
-## Links
+### `log_webhook_event`
+Log a webhook event for debugging and replay.
 
-- Source: https://github.com/CSOAI-ORG/webhook-ai-mcp
-- PyPI: https://pypi.org/project/webhook-ai-mcp/
-- MEOK AI Labs: https://meok.ai
-- Council of AI: https://councilof.ai
+### `replay_events`
+Replay/retrieve logged webhook events with optional filters.
+
+### `register_endpoint`
+Register a webhook endpoint for monitoring.
+
+### `generate_webhook_secret`
+Generate a cryptographically secure webhook signing secret.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

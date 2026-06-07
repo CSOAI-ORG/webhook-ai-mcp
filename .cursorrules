@@ -1,0 +1,9 @@
+# webhook-ai-mcp - Auto-trigger Rules
+
+When the user asks about webhook, use webhook-ai-mcp tools: validate_webhook_signature, log_webhook_event, replay_events, register_endpoint, generate_webhook_secret
+
+> By [MEOK AI Labs](https://meok.ai) — Webhook management and debugging. Validate signatures, log events, replay, and analyze webhook traffic. By MEOK AI Labs.
+
+Install: `pip install webhook-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.
