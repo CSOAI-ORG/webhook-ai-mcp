@@ -4,3 +4,8 @@ __pycache__/
 .dist/
 build/
 
+# Auto-added during alignment sweep
+dist/webhook_ai_mcp-1.0.6-py3-none-any.whl
+dist/webhook_ai_mcp-1.0.6.tar.gz
+dist/webhook_ai_mcp-1.0.9-py3-none-any.whl
+dist/webhook_ai_mcp-1.0.9.tar.gz
